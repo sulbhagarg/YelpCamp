@@ -1,0 +1,75 @@
+<%- include ('../partials/header') %>
+
+<link rel="stylesheet" href="/stylesheets/show.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/65a9999653.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/stylesheets/index.css">
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-8 col-md-12 col-sm-12 camp-show">
+            <div class="img-thumbnail">
+                <img class="img-responsive" src="<%= campground.image %>">
+                <div class="caption-full">
+                    <h5 class="float-right">$<%= campground.price %>/night</h5>
+                    <h1><%= campground.name %></h1> 
+                    <p><%= campground.description %></p>
+                    <p>
+                        <em>Submitted By: <%= campground.author.username %></em>
+                    </p>
+                    <% if(currentUser && campground.author.id.equals(currentUser._id)) { %>
+                        <a class="btn btn-sm btn-warning" href="/campgrounds/<%= campground._id %>/edit">Edit</a>
+                        <form id="delete-form" action="/campgrounds/<%= campground._id %>?_method=DELETE" method="POST">
+                            <button class="btn btn-sm btn-danger">Delete</button>
+                        </form>
+                    <% } %>
+                </div>
+            </div>
+            <div class="card card-body bg-light" style="padding: 2%;">
+                <div class="text-right">
+                    <a class="btn btn-success" href="/campgrounds/<%= campground._id %>/comments/new">Add New Comment</Command></a>
+                </div>
+                <hr>
+                <% campground.comments.forEach(function(comment){ %>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <strong><%= comment.author.username %></strong>
+                            <span class="float-right"><%= comment.time.toDateString() %></span>
+                            <p>
+                                <%= comment.text %>
+                            </p>
+                            <% if(currentUser && comment.author.id.equals(currentUser._id)) { %>
+                                <a class="btn btn-sm btn-warning" 
+                                href="/campgrounds/<%= campground._id %>/comments/<%= comment._id %>/edit">
+                                    Edit
+                                </a>
+                                <form id="delete-form" action="/campgrounds/<%= campground._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+                                    <input type="submit" class="btn btn-sm btn-danger" value="Delete">
+                                </form>
+                            <% } %>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-12 col-sm-12">
+            <div class="browse-more">
+                <h3 class="text-center">Browse More</h3>
+                <% campgrounds.forEach(function(campground){ %>
+                    <a class="campground-link" href="/campgrounds/<%= campground._id %>">
+                        <div class="card">
+                            <img class="card-img-top" src="<%= campground.image %>">
+                            <div class="caption" style="text-align: center;">
+                                <h4><%= campground.name %></h4>
+                                <hr>
+                            </div>
+                        </div>
+                    </a>
+                <% }); %>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include ('../partials/footer') %>

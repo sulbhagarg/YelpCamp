@@ -1,0 +1,17 @@
+html, body{
+    margin: 0px;
+    padding: 0px;
+    /* font-family: 'Inconsolata', monospace; */
+    font-family: 'Cabin', sans-serif;
+}
+
+#delete-form {
+    display: inline;
+}
+
+.btn{
+    outline: none;
+}
+.btn:hover{
+    outline: none;
+}

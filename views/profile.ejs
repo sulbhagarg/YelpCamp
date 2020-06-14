@@ -1,0 +1,8 @@
+<%- include ('./partials/header') %>
+
+    <div class="container">
+        <% if(currentUser) { %>
+            <p>Signed in as <%= currentUser.username %></p>
+        <% } %>
+    </div>
+<%- include ('./partials/footer') %>

@@ -1,0 +1,51 @@
+<%- include ('../partials/header') %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/65a9999653.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    <section id="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1><i class='fas fa-campground'></i> | Welcome To YelpCamp</h1>
+                    <p>View our hand-picked campgrounds from all over the world</p>
+                    <p>
+                        <a class="btn btn-primary btn-large" href="/campgrounds/new">Add New Campground</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container-fluid">   
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="card-columns">
+                    <% campgrounds.forEach(function(campground){ %>
+                        <a class="campground-link" href="/campgrounds/<%= campground._id %>">
+                            <div class="card">
+                                <img class="card-img-top" src="<%= campground.image %>">
+                                <div class="caption" style="text-align: center;">
+                                    <h4><%= campground.name %></h4>
+                                    <hr>
+                                </div>
+                            </div>
+                        </a>
+                    <% }); %>
+                </div>
+            </div>
+        </div>  
+    </div>
+
+    <section id="footer">
+        <div class="container-fluid text-center text-white">
+            <h1>
+                <i class="fab fa-instagram-square"></i>
+                <i class="fab fa-pinterest"></i>
+                <i class="fab fa-github"></i>
+            </h1>
+            <h4>&copy; - Unkown</h4>
+        </div>
+    </section>
+
+<%- include ('../partials/footer') %>
