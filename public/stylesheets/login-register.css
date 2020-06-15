@@ -82,16 +82,16 @@ img{
 /* Responsive Layout */
 /*Laptops*/
 @media screen and (max-width: 992px){
-    .left{
+    /* .left{
         display: none;
-    }
+    } */
 }
 
 /*Tablets*/
 @media screen and (max-width: 768px){
-    .left{
+    /* .left{
         display: none;
-    }
+    } */
     .login-register{
         margin: 10% auto;
     }
@@ -99,9 +99,9 @@ img{
 
 /*Mobile Phone*/
 @media screen and (max-width: 576px){
-    .left{
+    /* .left{
         display: none;
-    }
+    } */
     .login-register{
         margin: 15% auto;
     }
