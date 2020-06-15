@@ -1,6 +1,7 @@
 body{
-    background-image: linear-gradient(to right, rgba(250,128,114, 0.8), rgba(205,92,92, 0.8));
+    /* background-image: linear-gradient(to right, rgba(250,128,114, 0.8), rgba(205,92,92, 0.8)); */
     /* background-image: linear-gradient(to right, rgb(188,143,143), rgb(47,79,79)); */
+    background-color: #1f1f1f;
 }
 
 nav{
@@ -9,7 +10,7 @@ nav{
 }
 
 .login-register{
-    /* box-shadow: 1px 1px 30px 1px rgb(64,224,208); */
+    box-shadow: 1px 5px 30px 1px black;
     background-color: white;
     padding: 0;
     margin: 5% auto;
@@ -54,7 +55,8 @@ img{
 }
 
 .btn-submit{
-    background-image: linear-gradient(to right, rgba(250,128,114, 0.8), rgba(205,92,92, 0.8));
+    background-color: #1f1f1f;
+    /* background-image: linear-gradient(to right, rgba(250,128,114, 0.8), rgba(205,92,92, 0.8)); */
     /* background-image: linear-gradient(to right, rgb(64,224,208), rgb(0,191,255)); */
     color: white;
     letter-spacing: 0.05em;
@@ -64,8 +66,17 @@ img{
 
 .btn-submit:hover{
     color: white;
-    background-image: linear-gradient(to right, rgba(205,92,92, 0.8), rgba(250,128,114, 0.8));
+    background-color: black;
+    /* background-image: linear-gradient(to right, rgba(205,92,92, 0.8), rgba(250,128,114, 0.8)); */
 
+}
+
+.brandname{
+    font-family: 'Satisfy', cursive;
+    font-style: normal;
+    font-size: 3rem;
+    font-weight: bolder;
+    padding-top: 5%;
 }
 
 /* Responsive Layout */
