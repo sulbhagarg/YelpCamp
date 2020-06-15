@@ -8,9 +8,9 @@ router.get("/", function(req, res){
     res.render("landing");
 });
 
-// show register form
-router.get("/register", function(req, res){
-    res.render("register");
+// show login-register form
+router.get("/login-register", function(req, res){
+    res.render("login-register");
 });
 
 // handle sign up
@@ -29,11 +29,6 @@ router.post("/register", function(req, res){
     });
 });
 
-// show login form
-router.get("/login", function(req, res){
-    res.render("login");
-})
-
 // handle login
 // (route, middleware, callback)
 // can remove callback if you wish
@@ -41,7 +36,7 @@ router.get("/login", function(req, res){
 router.post("/login", passport.authenticate("local",
     {
         successRedirect: "/campgrounds",
-        failureRedirect: "/login"
+        failureRedirect: "/login-register"
     }), function(req, res){     
 });
 

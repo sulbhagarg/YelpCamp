@@ -1,12 +1,13 @@
 body {
     background: url(https://images.unsplash.com/photo-1445308394109-4ec2920981b1?dpr=2&fit=crop&fm=jpg&h=825&ixlib=rb-0.3.5&q=50&w=1450);
     background-size: cover;
-    background-position: center; 
-    transition: background 1s linear;
-    /* visibility: hidden; */
-    -webkit-transition: background 1s linear;
-    transform: translate3d(0,0,0);
-    -webkit-transform: translate3d(0,0,0);
+    background-position: center;
+    transition: background 1s ease-in;
+    -webkit-transition: background 1s ease-in;
+}
+
+nav{
+    visibility: hidden;
 }
 
 .bg {

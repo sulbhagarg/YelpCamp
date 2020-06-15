@@ -57,6 +57,8 @@
     padding: 5%;
 }
 
+/* Responsive Layouts */
+
 /*Laptops*/
 @media screen and (max-width: 992px){
     .card-columns{

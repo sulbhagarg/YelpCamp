@@ -1,0 +1,97 @@
+body{
+    background-image: linear-gradient(to right, rgba(250,128,114, 0.8), rgba(205,92,92, 0.8));
+    /* background-image: linear-gradient(to right, rgb(188,143,143), rgb(47,79,79)); */
+}
+
+nav{
+    /* display: none; */
+    visibility: hidden;
+}
+
+.login-register{
+    /* box-shadow: 1px 1px 30px 1px rgb(64,224,208); */
+    background-color: white;
+    padding: 0;
+    margin: 5% auto;
+}
+
+.left{
+    height: 650px;
+    padding: 0;
+}
+
+img{
+    height: 650px;
+}
+
+.login h1{
+    font-weight: bolder;
+    padding: 6%;
+}
+
+.right input[type=text], input[type=password], input[type=email]{
+    width: 400px;
+    padding: 2% 2%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    outline: none;
+}
+
+.right input[type=submit]{
+    border-radius: 30px;
+    font-size: large;
+    text-transform: capitalize;
+    padding: 1% 4%;
+}
+
+.register{
+    display: none;
+}
+
+.register h1{
+    padding: 6%;
+    font-weight: bolder;
+}
+
+.btn-submit{
+    background-image: linear-gradient(to right, rgba(250,128,114, 0.8), rgba(205,92,92, 0.8));
+    /* background-image: linear-gradient(to right, rgb(64,224,208), rgb(0,191,255)); */
+    color: white;
+    letter-spacing: 0.05em;
+    width: 400px;
+    margin: auto;
+}
+
+.btn-submit:hover{
+    color: white;
+    background-image: linear-gradient(to right, rgba(205,92,92, 0.8), rgba(250,128,114, 0.8));
+
+}
+
+/* Responsive Layout */
+/*Laptops*/
+@media screen and (max-width: 992px){
+    .left{
+        display: none;
+    }
+}
+
+/*Tablets*/
+@media screen and (max-width: 768px){
+    .left{
+        display: none;
+    }
+    .login-register{
+        margin: 10% auto;
+    }
+}
+
+/*Mobile Phone*/
+@media screen and (max-width: 576px){
+    .left{
+        display: none;
+    }
+    .login-register{
+        margin: 15% auto;
+    }
+}
