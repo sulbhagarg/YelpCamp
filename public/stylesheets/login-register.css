@@ -1,11 +1,10 @@
 body{
-    /* background-image: linear-gradient(to right, rgba(250,128,114, 0.8), rgba(205,92,92, 0.8)); */
-    /* background-image: linear-gradient(to right, rgb(188,143,143), rgb(47,79,79)); */
     background-color: #1f1f1f;
 }
 
 nav{
     display: none;
+    height: 0;
     visibility: hidden;
 }
 
@@ -13,7 +12,14 @@ nav{
     box-shadow: 1px 5px 30px 1px black;
     background-color: white;
     padding: 0;
-    margin: 5% auto;
+    max-width: 1000px;
+    height: 650px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
 }
 
 .left{
@@ -56,8 +62,6 @@ img{
 
 .btn-submit{
     background-color: #1f1f1f;
-    /* background-image: linear-gradient(to right, rgba(250,128,114, 0.8), rgba(205,92,92, 0.8)); */
-    /* background-image: linear-gradient(to right, rgb(64,224,208), rgb(0,191,255)); */
     color: white;
     letter-spacing: 0.05em;
     width: 400px;
@@ -67,8 +71,6 @@ img{
 .btn-submit:hover{
     color: white;
     background-color: black;
-    /* background-image: linear-gradient(to right, rgba(205,92,92, 0.8), rgba(250,128,114, 0.8)); */
-
 }
 
 .brandname{
@@ -82,27 +84,69 @@ img{
 /* Responsive Layout */
 /*Laptops*/
 @media screen and (max-width: 992px){
-    /* .left{
+    .image-slider{
         display: none;
-    } */
+        height: 0;
+        visibility: hidden;
+    }
+    .login-register{
+        height: auto;
+        position: absolute;
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
 }
 
 /*Tablets*/
 @media screen and (max-width: 768px){
-    /* .left{
+    .image-slider{
         display: none;
-    } */
+        height: 0;
+        visibility: hidden;
+    }
     .login-register{
-        margin: 10% auto;
+        height: auto;
+        position: absolute;
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
     }
 }
 
 /*Mobile Phone*/
 @media screen and (max-width: 576px){
-    /* .left{
+    .image-slider{
         display: none;
-    } */
+        height: 0;
+        visibility: hidden;
+    }
     .login-register{
-        margin: 15% auto;
+        height: auto;
+        position: absolute;
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    .right input[type=text], input[type=password], input[type=email]{
+        width: 75%;
+        padding: 2% 2%;
+        border: 1px solid lightgray;
+        border-radius: 5px;
+        outline: none;
+    }
+    
+    .right input[type=submit]{
+        width: 75%;
+        border-radius: 30px;
+        font-size: large;
+        text-transform: capitalize;
+        padding: 1% 4%;
     }
 }
