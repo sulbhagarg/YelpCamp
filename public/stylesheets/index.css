@@ -77,7 +77,6 @@
         column-count: 2;
         padding: 0;
     }
-
     .card{
         margin: 10% 0;
     }
@@ -88,7 +87,6 @@
     .card-columns{
         column-count: 1;
     }
-
     .card{
         margin: 10% 0;
     }
@@ -96,12 +94,10 @@
 
 /*Mobile Phone*/
 @media screen and (max-width: 576px){
-
     .card-columns{
         column-count: 1;
         padding: 0;
     }
-
     .card{
         margin-bottom: 10%;
         margin-top: 10%;
