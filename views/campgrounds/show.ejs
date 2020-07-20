@@ -23,11 +23,16 @@
                             <button class="btn btn-sm btn-danger">Delete</button>
                         </form>
                     <% } %>
+                    <% if(currentUser) { %>
+                        <div class="float-right">
+                            <i onclick="myFunction(this)" class="fa fa-heart" style="font-size:20px;color: rgb(0, 0, 0);"></i> &nbsp;|&nbsp; 2.3KLikes
+                        </div>
+                    <% } %>
                 </div>
             </div>
             <div class="card card-body bg-light" style="padding: 2%;">
                 <div class="text-right">
-                    <a class="btn btn-dark" href="/campgrounds/<%= campground._id %>/comments/new">Add New Comment</Command></a>
+                    <a class="btn btn-dark" href="/campgrounds/<%= campground._id %>/comments/new">Add New Comment</a>
                 </div>
                 <hr>
                 <% campground.comments.forEach(function(comment){ %>
@@ -71,5 +76,16 @@
         </div>
     </div>
 </div>
+
+<script>
+    function myFunction(x) {
+        var background = document.getElementsByClassName("fa-heart")[0].style.color;
+        if (background == "rgb(0, 0, 0)") {
+            document.getElementsByClassName("fa-heart")[0].style.color = "rgb(255,0,0)";
+        } else {
+            document.getElementsByClassName("fa-heart")[0].style.color = "rgb(0,0,0)";
+        }
+    }
+</script>
 
 <%- include ('../partials/footer') %>
