@@ -20,9 +20,9 @@ https://yelp-camp-sulbha.herokuapp.com/
    - `$> cd YelpCamp/`
 3. Install Dependencies
    - `$> npm install`
-4. Environement Variables
+4. Environement Variables - cmd line setup
    - `$env:PORT = "3000"`
-   - `$env:DATABASEURL = "your_databse_url_generated_from_mongo_cloud"
+   - `$env:DATABASEURL = "your_databse_url_generated_from_mongo_cloud"`
 5. Start server
    - `$> node app.js`
 
